@@ -2,15 +2,15 @@ package tree
 
 import "fmt"
 
-type TreeNode struct {
+type Node struct {
 	Value int
-	Left,Right *TreeNode
+	Left,Right *Node
 }
 
-func  (node TreeNode)Print()  {
+func  (node Node)Print()  {
 	fmt.Println(node.Value)
 }
-func (node *TreeNode) SetValue(value int)  {
+func (node *Node) SetValue(value int)  {
 	if node == nil {
 		fmt.Println("Setting Value to nil. Ignored")
 		return
@@ -18,16 +18,8 @@ func (node *TreeNode) SetValue(value int)  {
 	node.Value = value
 }
 
-func (node *TreeNode)Traverse()  {
-	if node == nil{
-		return
-	}
-	node.Left.Traverse()
-	node.Print()
-	node.Right.Traverse()
-	
-}
-func CreateNode(i int) *TreeNode {
-	return &TreeNode{Value: i}
+
+func CreateNode(i int) *Node {
+	return &Node{Value: i}
 }
 

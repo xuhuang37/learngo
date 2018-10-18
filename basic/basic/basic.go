@@ -1,9 +1,9 @@
-package basic
+package main
 
 import (
 	"fmt"
-	"math/cmplx"
 	"math"
+	"math/cmplx"
 )
 
 func variableZeroValue() {
@@ -47,23 +47,22 @@ func consts() {
 
 func enums() {
 	const (
-		cpp  = iota
+		cpp = iota
 		java
 		python
 		golang
 		javascript
 	)
 
-	const(
-		b = 1<<(10*iota)
+	const (
+		b = 1 << (10 * iota)
 		kb
 		mb
 		gb
 		tb
 	)
 	//println(cpp,java,python,golang,javascript)
-	println(b,kb,mb,gb,tb)
-
+	println(b, kb, mb, gb, tb)
 
 }
 func main() {
