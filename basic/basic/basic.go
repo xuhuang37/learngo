@@ -29,11 +29,10 @@ func euler() {
 	fmt.Printf("%.3f\n", cmplx.Pow(math.E, 1i*math.Pi)+1)
 }
 
-func triangle() {
-	var a, b int = 3, 4
+func calcTriangle(a,b int) int {
 	var c int
 	c = int(math.Sqrt(float64(a*a + b*b)))
-	println(c)
+	return c
 }
 
 func consts() {
@@ -70,7 +69,6 @@ func main() {
 	variableZeroValue()
 	variableInitialValue()
 	euler()
-	triangle()
 	consts()
 	enums()
 }

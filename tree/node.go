@@ -7,7 +7,7 @@ type Node struct {
 	Left,Right *Node
 }
 
-func  (node Node)Print()  {
+func (node *Node)Print()  {
 	fmt.Println(node.Value)
 }
 func (node *Node) SetValue(value int)  {
@@ -22,4 +22,6 @@ func (node *Node) SetValue(value int)  {
 func CreateNode(i int) *Node {
 	return &Node{Value: i}
 }
+
+
 
